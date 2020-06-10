@@ -43,7 +43,7 @@ class PostController extends Controller
     {
         // Validate posted form data
         $validated = $request->validate([
-            'title'    => 'required|string|unique:posts|min:5|max:100',
+            'title'    => 'required|string|min:5|max:100', //took out |unique:posts| between string and min
             'content'  => 'required|string|min:5|max:2000',
             'category' => 'required|string|max:30'
         ]);
